@@ -1,0 +1,2 @@
+C:\Users\vitya\source\repos\Client\Debug\Client.exe
+C:\Users\vitya\source\repos\Client2\Debug\Client.exe

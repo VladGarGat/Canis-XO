@@ -1,0 +1,54 @@
+Wed Nov 15 02:32:50 2023
+ - Sockets start up!
+
+Wed Nov 15 02:32:50 2023
+ - Make TCP socket
+
+Wed Nov 15 02:32:50 2023
+ - Server was conected. Socket: 320
+
+Wed Nov 15 02:33:00 2023
+ - Send to server username: client1
+
+Wed Nov 15 02:33:00 2023
+ - Send to server password: 2
+
+Wed Nov 15 02:33:00 2023
+ - Authorisation Accept
+
+Wed Nov 15 02:33:00 2023
+ - Server send message: O
+
+Wed Nov 15 02:33:04 2023
+ - Server send message: X--------
+
+Wed Nov 15 02:33:06 2023
+ - We choice move: 2
+
+Wed Nov 15 02:33:06 2023
+ - We send message: 2
+
+Wed Nov 15 02:33:08 2023
+ - Server send message: XO-X-----
+
+Wed Nov 15 02:33:10 2023
+ - We choice move: 3
+
+Wed Nov 15 02:33:10 2023
+ - We send message: 3
+
+Wed Nov 15 02:33:11 2023
+ - Server send message: endX
+
+Wed Nov 15 02:33:24 2023
+ - We send message: Yes
+
+Wed Nov 15 02:33:24 2023
+ - Server send message: O
+
+Wed Nov 15 02:33:57 2023
+ - Server send message: endO
+
+Wed Nov 15 02:34:05 2023
+ - We send message: Yes
+

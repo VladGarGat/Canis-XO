@@ -1,0 +1,171 @@
+Wed Nov 15 02:32:38 2023
+ - Loaded config file
+
+Wed Nov 15 02:32:38 2023
+ - Sockets start up!
+
+Wed Nov 15 02:32:38 2023
+ - Make TCP socket
+
+Wed Nov 15 02:32:38 2023
+ - Bind sockets to IP/port
+
+Wed Nov 15 02:32:38 2023
+ - Listen port by socket
+
+Wed Nov 15 02:32:45 2023
+ - First player was conected. Socket: 324
+
+Wed Nov 15 02:32:50 2023
+ - Second player was conected. Socket: 328
+
+Wed Nov 15 02:32:54 2023
+ - First player username: client
+
+Wed Nov 15 02:33:00 2023
+ - Second player username: client1
+
+Wed Nov 15 02:33:00 2023
+ - First player password: 1
+
+Wed Nov 15 02:33:00 2023
+ - Second player password: 2
+
+Wed Nov 15 02:33:00 2023
+ - First player is authorised
+
+Wed Nov 15 02:33:00 2023
+ - Second player is authorised
+
+Wed Nov 15 02:33:00 2023
+ - Game started
+
+Wed Nov 15 02:33:00 2023
+ - First move by 324
+
+Wed Nov 15 02:33:00 2023
+ - Second move by 328
+
+Wed Nov 15 02:33:00 2023
+ - Send figure X of playing to 324
+
+Wed Nov 15 02:33:00 2023
+ - Send figure O of playing to 328
+
+Wed Nov 15 02:33:00 2023
+ - Move 1
+
+Wed Nov 15 02:33:00 2023
+ - Send board and wait for move by 324
+
+Wed Nov 15 02:33:04 2023
+ - Recieve move 1 by 324
+
+Wed Nov 15 02:33:04 2023
+ - Time of move 3752by324
+
+Wed Nov 15 02:33:04 2023
+ - Move 2
+
+Wed Nov 15 02:33:04 2023
+ - Send board and wait for move by 328
+
+Wed Nov 15 02:33:06 2023
+ - Recieve move 2 by 328
+
+Wed Nov 15 02:33:06 2023
+ - Time of move 1946by328
+
+Wed Nov 15 02:33:06 2023
+ - Move 3
+
+Wed Nov 15 02:33:06 2023
+ - Send board and wait for move by 324
+
+Wed Nov 15 02:33:08 2023
+ - Recieve move 4 by 324
+
+Wed Nov 15 02:33:08 2023
+ - Time of move 2133by324
+
+Wed Nov 15 02:33:08 2023
+ - Move 4
+
+Wed Nov 15 02:33:08 2023
+ - Send board and wait for move by 328
+
+Wed Nov 15 02:33:10 2023
+ - Recieve move 3 by 328
+
+Wed Nov 15 02:33:10 2023
+ - Time of move 1922by328
+
+Wed Nov 15 02:33:10 2023
+ - Move 5
+
+Wed Nov 15 02:33:10 2023
+ - Send board and wait for move by 324
+
+Wed Nov 15 02:33:11 2023
+ - Recieve move 7 by 324
+
+Wed Nov 15 02:33:11 2023
+ - Time of move 1342by324
+
+Wed Nov 15 02:33:11 2023
+ - Winner is 324
+
+Wed Nov 15 02:33:11 2023
+ - Send endgame to player: 324
+
+Wed Nov 15 02:33:11 2023
+ - Send endgame to player: 328
+
+Wed Nov 15 02:33:20 2023
+ - Recieve answer: Yes
+
+Wed Nov 15 02:33:24 2023
+ - Recieve answer: Yes
+
+Wed Nov 15 02:33:24 2023
+ - Game started
+
+Wed Nov 15 02:33:24 2023
+ - First move by 324
+
+Wed Nov 15 02:33:24 2023
+ - Second move by 328
+
+Wed Nov 15 02:33:24 2023
+ - Send figure X of playing to 324
+
+Wed Nov 15 02:33:24 2023
+ - Send figure O of playing to 328
+
+Wed Nov 15 02:33:24 2023
+ - Move 1
+
+Wed Nov 15 02:33:24 2023
+ - Send board and wait for move by 324
+
+Wed Nov 15 02:33:57 2023
+ - Recieve move 1 by 324
+
+Wed Nov 15 02:33:57 2023
+ - Time of move 33024by324
+
+Wed Nov 15 02:33:57 2023
+ - Winner is 328by time
+
+Wed Nov 15 02:33:57 2023
+ - Send endgame to player: 324
+
+Wed Nov 15 02:33:57 2023
+ - Send endgame to player: 328
+
+Wed Nov 15 02:34:01 2023
+ - Recieve answer: No
+
+Wed Nov 15 02:34:05 2023
+ - Recieve answer: No
+

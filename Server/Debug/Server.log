@@ -1,0 +1,6 @@
+﻿  Server.cpp
+C:\Users\vitya\source\repos\Server\Server.cpp(85,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\vitya\source\repos\Server\Server.cpp(119,39): warning C4018: >: несоответствие типов со знаком и без знака
+C:\Users\vitya\source\repos\Server\Server.cpp(141,39): warning C4018: >: несоответствие типов со знаком и без знака
+C:\Users\vitya\source\repos\Server\Server.cpp(162): warning C4715: play_and_get_winner: значение возвращается не при всех путях выполнения
+  Server.vcxproj -> C:\Users\vitya\source\repos\Server\Debug\Server.exe
