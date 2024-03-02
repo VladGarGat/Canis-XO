@@ -1,6 +1,6 @@
-﻿#pragma comment(lib, "ws2_32.lib")
-#define __STDC_WANT_LIB_EXT1__ 1
-#include <winsock2.h>
+#pragma comment(lib, "ws2_32.lib")
+#include <WinSock2.h>
+
 #include <iostream>
 #include <fstream>
 #include <stdio.h>
@@ -85,7 +85,7 @@ char play_and_get_winner(SOCKET opponents[2], std::ofstream* f, int move_time) {
     srand(time(NULL));
     int first = rand() % 2;
     SOCKET firstOp = opponents[first];
-    SOCKET secondOp = opponents[(first+1)%2];
+    SOCKET secondOp = opponents[(first + 1) % 2];
     time_t now = time(0); char* dt = ctime(&now);
     *f << ((std::string)dt + " - First move by ") << firstOp << std::endl << std::endl;
 
@@ -162,16 +162,45 @@ char play_and_get_winner(SOCKET opponents[2], std::ofstream* f, int move_time) {
 }
 
 int main(int argc, char* argv[]) {
-    std::ofstream f;
-    f.open("log.txt");
+
+
+    // В командую строку передается любое кол-во аргументов.
+    // Название файла конфигурации должно быть подано в виде:
+    // -cfg config_name
+
     std::ifstream f1;
-    f1.open("config.txt");
+    std::string cfgname = "config.txt";
+    if (argc > 2) {
+        std::string str;
+        for (int i = 1; i < argc - 1; i += 2) {
+            str = argv[i];
+            if (str == "-cfg" && ((i + 1) < argc)) {
+                cfgname = argv[i + 1];
+                break;
+            }
+        }
+    }
+    f1.open(cfgname);
+
+    // читаем название лог-файла, которое должно быть первой строкой в конфиге
+    std::ofstream f;
+    std::string logname;
+    std::getline(f1, logname);
+    f.open(logname);
+
+    // читаем две строки: адрес и порт соответственно следующими строчками из конфига
+    std::string s_ip; std::string s_port;
+    std::getline(f1, s_ip);
+    std::getline(f1, s_port);
+    const char* ip = s_ip.c_str();
+    int port = stoi(s_port);
+
     std::string line;
     unsigned int move_time;
     std::unordered_map<std::string, std::string> users;
     std::getline(f1, line);
     move_time = stoi(line);
-    while (std::getline(f1, line)){
+    while (std::getline(f1, line)) {
         size_t pos = line.find(" ");
         std::string username = line.substr(0, pos);
         line.erase(0, pos + 1);
@@ -188,10 +217,10 @@ int main(int argc, char* argv[]) {
         exit(1);
     }
     now = time(0); dt = ctime(&now);
-    f << ((std::string) dt + " - Sockets start up!") << std::endl << std::endl;
+    f << ((std::string)dt + " - Sockets start up!") << std::endl << std::endl;
     SOCKADDR_IN addr;
-    addr.sin_addr.s_addr = inet_addr("127.0.0.1");
-    addr.sin_port = htons(1111);
+    addr.sin_addr.s_addr = inet_addr(ip);
+    addr.sin_port = htons(port);
     addr.sin_family = AF_INET;
     SOCKET sListen = socket(AF_INET, SOCK_STREAM, NULL);
     now = time(0); dt = ctime(&now);
@@ -299,7 +328,7 @@ int main(int argc, char* argv[]) {
             printf("Player O:%d\n", o_wins);
             printf("Ties:%d \n\n", ties);
             char end[20] = "end";
-            memcpy(end + sizeof("end")*sizeof('e')-1, &winner, sizeof(winner));
+            memcpy(end + sizeof("end") * sizeof('e') - 1, &winner, sizeof(winner));
             send(FConnection, end, sizeof(end), NULL);
             now = time(0); dt = ctime(&now);
             f << ((std::string)dt + " - Send endgame to player: ") << FConnection << std::endl << std::endl;
@@ -315,7 +344,7 @@ int main(int argc, char* argv[]) {
             recv(SConnection, reply1, sizeof(reply1), NULL);
             now = time(0); dt = ctime(&now);
             f << ((std::string)dt + " - Recieve answer: ") << reply1 << std::endl << std::endl;
-            
+
             while (strcmp(reply, "Yes") != 0 && strcmp(reply, "No") != 0) {
                 send(FConnection, "Please Enter A Valid Reply , Yes / No:", sizeof("Please Enter A Valid Reply , Yes / No:"), NULL);
                 recv(FConnection, reply, sizeof(reply), NULL);
